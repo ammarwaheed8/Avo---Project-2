@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Carousel with Content</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* Background images for each slide */
+.slide1 {
+  background-image: url('image1.jpg');
+}
+
+.slide2 {
+  background-image: url('image2.jpg');
+}
+
+/* Active class to apply the scale-up and fade-in effect */
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1.1); /* Scale up effect */
+}
+
+.white-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  pointer-events: none;
+  transition: background 0.4s ease; /* White fade for 0.4s */
+}
+
+/* Content styling */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 80%;
+  background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <div class="carousel-slide slide1 active">
+    <div class="content"> <!-- Slide-specific content here -->
+      <h1>Welcome to Slide 1</h1>
+      <p>This is the content for the first slide.</p>
+    </div>
+  </div>
+  <div class="carousel-slide slide2">
+    <div class="content"> <!-- Slide-specific content here -->
+      <h1>Welcome to Slide 2</h1>
+      <p>This is the content for the second slide.</p>
+    </div>
+  </div>
+  <div class="white-fade"></div>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.carousel-slide');
+const fadeOverlay = document.querySelector('.white-fade');
+let currentIndex = 0;
+
+function moveCarousel() {
+  // Remove the active class from the current slide
+  slides[currentIndex].classList.remove('active');
+
+  // Move to the next slide and loop back to the start if necessary
+  currentIndex = (currentIndex + 1) % slides.length;
+
+  // Add the active class to the new slide
+  slides[currentIndex].classList.add('active');
+
+  // Quick white fade effect
+  fadeOverlay.style.background = 'rgba(255, 255, 255, 1)';
+  setTimeout(() => {
+    fadeOverlay.style.background = 'rgba(255, 255, 255, 0)';
+  }, 400); // White fade for 0.4 seconds
+}
+
+// Infinite loop with interval for continuous sliding
+setInterval(moveCarousel, 5000); // 5-second interval
+
+</script>
+</body>
+</html>
