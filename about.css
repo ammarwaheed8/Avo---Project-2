@@ -20,14 +20,33 @@
     transform: translateY(0);
 }
 
-/* --- Section-1 Styling CSS --- */
-#section-1 {
+.hero-pallete {
+    border: 1px solid green;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 400px;
     overflow: hidden;
 }
+
+.pallete-1 {
+    background-color: #1eb6f2;
+    left: -205px;
+    top: 237px;
+    width: 1216px;
+    height: 165px;
+    position: relative;
+    transform: rotate(7deg);
+}
+
+.pallete-2 {
+    background-color: #eff316;
+    top: 6px;
+    left: 940px;
+    width: 1083px;
+    height: 193px;
+    position: relative;
+    transform: rotate(345deg);
+}
+
 
 /* --- Navbar Styling CSS --- */
 #logo {
@@ -54,58 +73,58 @@ a {color: #ffffff99;}
     position: fixed;
     width: 100%;
     z-index: 3;
-  }
+}
   
-  .header ul {
+.header ul {
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
     background-color: #020202;
-  }
+}
   
-  .header li a {
+.header li a {
     display: block;
     padding: 20px 20px;
     border-right: 1px solid #020202;
     text-decoration: none;
     transition: color ease-in-out 0.3s 0.1ms;
-    
-  }
+
+}
   
 .header li a:hover,
 .header .menu-btn:hover {
     color: #d1002c!important;
 }
   
-  /* menu */
-  .header .menu {
+/* menu */
+.header .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
-  }
+}
   
-  /* menu icon */
-  .header .menu-icon {
+/* menu icon */
+.header .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
     padding: 28px 20px;
     position: relative;
     user-select: none;
-  }
+}
   
-  .header .menu-icon .navicon {
+.header .menu-icon .navicon {
     background: #e51111;
     display: block;
     height: 2px;
     position: relative;
     transition: background .2s ease-out;
     width: 18px;
-  }
+}
   
-  .header .menu-icon .navicon:before,
-  .header .menu-icon .navicon:after {
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
     background: #e51111;
     content: '';
     display: block;
@@ -113,25 +132,25 @@ a {color: #ffffff99;}
     position: absolute;
     transition: all .2s ease-out;
     width: 100%;
-  }
+}
   
-  .header .menu-icon .navicon:before {
+.header .menu-icon .navicon:before {
     top: 5px;
-  }
+}
   
-  .header .menu-icon .navicon:after {
+.header .menu-icon .navicon:after {
     top: -5px;
-  }
+}
   
-  /* menu btn */
+/* menu btn */
   
-  .header .menu-btn {
+.header .menu-btn {
     display: none;
-  }
+}
   
-  .header .menu-btn:checked ~ .menu {
+.header .menu-btn:checked ~ .menu {
     max-height: 340px;
-  }
+}
   
 .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
@@ -150,154 +169,60 @@ a {color: #ffffff99;}
     top: 0;
 }
   
-
-
-/* --- Content Box with Image Transition Styling CSS --- */
-.carousel {
-    position: relative;
+/* --- Section-1 Styling CSS --- */
+#section-1 {
     width: 100%;
-    height: 100vh;
-}
-  
-.carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    transform: scale(1);
+    height: 600px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-  
-.slide1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bg1-sec1-home.jpg') no-repeat center center;
-}
-  
-.slide2 {
+    flex-direction: column;
+    overflow: hidden;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bg2-sec1-home.jpg') no-repeat center center;
-}
-  
-.carousel-slide.active {
-    opacity: 1;
-    transform: scale(1.1);
-}
-  
-.white-fade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0);
-    pointer-events: none;
-    transition: background 0.4s ease;
-}
-  
-.content {
-    position: relative;
-    z-index: 1;
-    min-width: 870px;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    background-position: bottom;
 }
 
-.left-pane {
+.sec-1-content {
+    border: 1px solid green;
+    width: 936px;
+    height: 165px;
+    padding:  7px 7px 48px 7px;
+    margin: 0 auto 48px auto;
     display: flex;
-    justify-content: start;
     flex-direction: column;
     flex-wrap: nowrap;
+    position: relative;
+    bottom: -302px;
 }
 
-.left-pane h1 {
-    width: 418px;
+.sec-1-all-hero {
+    /* border: 1px solid rgb(237, 225, 10); */
+    width: fit-content;
     height: fit-content;
-    margin-bottom: 24px;
-    font-size: 40px;
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.sec-1-all-hero i {
+    margin-left: 3px;
     font-weight: 900;
 }
 
-.left-pane p {
-    width: 388px;
-    height: fit-content;
-    margin-bottom: 24px;
-    text-align: left;
-    font-size: 16px;
-    color: #ffffffcc;
+
+.sec-1-all-hero p, .sec-1-all-hero a {
+    color: #fffceab3;  
+    text-decoration: none; 
+    font-size: 13.5px;
+    font-weight: 500;
 }
 
-.red-btn {
-    font-size: 14px;
-    padding: 16px 24px;
-    width: 150px;
-    height: 55px;
-    border-radius: 4px;
-    text-align: center;
-    background-color: #d1002c !important;
-}
-
-.right-pane {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.right-pane h1 {
-    width: fit-content;
-    height: fit-content;
+#sec-1-hero-heading {
+    color: #fffcea;
     font-size: 40px;
-    text-align: left;
-    font-weight: 800;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
+    font-weight: 900;
+    margin: 30px 0 0 0;
 }
 
-.right-pane p {
-    width: 100px;
-    height: fit-content;
-    margin-bottom: 24px;
-    text-align: left;
-    font-size: 16px;
-    color: #ffffff66;
-}
-
-#caro-1-bar {
-    width: 6px;
-    height: 30px;
-    margin-left: 10px;
-    background-color: #d1002c;
-    position: absolute;
-    top: 12px;
-    right: 10px;   
-}
-
-#caro-2-bar {
-    width: 6px;
-    height: 30px;
-    margin-left: 10px;
-    background-color: #d1002c;
-    position: absolute;
-    top: 30px;
-    right: 55px;   
-}
 
 /* --- Section-2 Styling CSS --- */
 #section-2 {
@@ -452,19 +377,14 @@ footer {
 
 /* --------- Media Query of Max width of 992px --------- */
 @media screen and (max-width: 991px){
-/* Navbar */
+/* ----- Navbar CSS Style ------ */
 .header {
     max-width: 750px;
 }
 
-/* Section 1 Content */
-#section-1 {
-    height: fit-content;
-}
-
-.content {
-    min-width: 700px;
-    padding: 20px;
+/* ------ Section-1 Styling ------ */
+.sec-1-content {
+    width: 78%;
 }
 
 }
@@ -472,45 +392,11 @@ footer {
 
 /* --------- Media Query of Max width of 767px --------- */
 @media screen and (max-width: 766px){
-/* Section 1 Content */
-.content {
-    min-width: 500px;
-    width: fit-content;
-    flex-direction: column;
-    padding: 15px;
+/* ------ Section-1 Styling ------ */
+.sec-1-content {
+    width: 86%;
 }
 
-.left-pane {
-    margin-bottom: 30px;
-    width: 450px;
-}
-
-.right-pane {
-    width: 350px;
-    height: 148px;
-    margin: 30px auto 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-pane p {
-    width: 400px;
-    margin: 0 0 0 40px;
-}
-
-#caro-1-bar {
-    top: 463px;
-    left: 145px;   
-    margin-left: 10px;
-}
-
-#caro-2-bar {
-    top: 463px;
-    left: 125px;   
-    margin-left: 10px;
-}
 
 /* ------ Footer CSS Styling ------*/
 footer {
@@ -530,124 +416,15 @@ footer {
 
 /* --------- Media Query of Max width of 576px --------- */
 @media screen and (max-width: 576px){
+/* ------ Section-1 Styling ------ */
  
-/* Section-1 Styling */
-.content {
-    min-width: 330px;
-    width: fit-content;
-    flex-direction: column;
-    padding: 15px;
-    margin-top: 45px;
-}
-    
-.left-pane {
-    margin-bottom: 30px;
-    width: 330px;
-}
-    
-.left-pane h1 {
-    width: 320px;
-    text-align: center;
-}
-    
-.left-pane p {
-    width: 320px;
-    text-align: center;
-}
-
-.red-btn {
-    margin: auto;
-}
-
-    
-.right-pane {
-    width: 330px;
-    height: 148px;
-    margin: 30px auto 0 auto;
-}
-
-.right-pane p {
-    width: 400px;
-    margin: 0 0 0 40px;
-}
-
-.right-pane h1 {
-    width: 225px;
-}
-
-#caro-1-bar {
-    top: 518px;
-    left: 110px;   
-    margin-left: 10px;
-}
-
-#caro-2-bar {
-    top: 518px;
-    left: 95px;   
-    margin-left: 10px;
-}
-
 
 }
 
 /* --------- Media Query of Max width of 390px --------- */
 @media screen and (max-width: 389px){
+/* ------ Section-1 Styling ------ */
 
-/* Section-1 Styling */
-.content {
-    min-width: 320px;
-    width: fit-content;
-    flex-direction: column;
-    padding: 15px;
-    margin-top: 45px;
-}
-    
-.left-pane {
-    margin-bottom: 30px;
-    width: 310px;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    
-.left-pane h1 {
-    width: 240px;
-}
-    
-.left-pane p {
-    width: 240px;
-}
-    
-.right-pane {
-    width: 300px;
-    height: 148px;
-    padding: 5px;
-    flex-direction: column;
-}
-
-.right-pane h1 {
-    width: 70px;
-}
-
-
-.right-pane p {
-    width: 150px;
-    margin: 0;
-    text-align: center;
-}
-
-#caro-1-bar {
-    top: 529px;
-    left: 210px;   
-    margin-left: 10px;
-}
-
-#caro-2-bar {
-    top: 538px;
-    left: 200px;   
-    margin-left: 10px;
-}
 
 /* ------ Footer CSS Styling ------*/
 footer {

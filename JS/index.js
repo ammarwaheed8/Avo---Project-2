@@ -22,3 +22,38 @@ function moveCarousel() {
 
 // Infinite loop with interval for continuous sliding
 setInterval(moveCarousel, 5000); // 5-second interval
+
+// Section one projects counter on reload JS  Script
+const counterElement = document.getElementById("counter");
+        let count = 1;
+        const target = 400;
+        const speed = 5;
+
+        function updateCounter() {
+            counterElement.innerText = count;
+            if (count < target) {
+                count++;
+                setTimeout(updateCounter, speed);
+            }
+        }
+window.onload = updateCounter;
+
+// Reveal on scroll Effect
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+
+      reveals.forEach(reveal => {
+          const revealTop = reveal.getBoundingClientRect().top;
+
+          if (revealTop < windowHeight - 100) {
+              reveal.classList.add('active');
+          }
+      });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+});
