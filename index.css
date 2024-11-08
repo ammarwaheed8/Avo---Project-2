@@ -9,6 +9,14 @@
 
 .active-red {color: #d1002c!important;}
 
+.section-main-heading {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 0 0 16px 0;
+    color: #000000CC;
+    text-align: center;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(100px); 
@@ -18,15 +26,6 @@
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* --- Section-1 Styling CSS --- */
-#section-1 {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
 }
 
 /* --- Navbar Styling CSS --- */
@@ -149,7 +148,41 @@ a {color: #ffffff99;}
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
-  
+
+/* --- Section-1 Styling CSS --- */
+#section-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sec-1-hero-pallete {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.sec-1-pallete-1 {
+    background-color: #ffffff;
+    top: 274px;
+    left: -30px;
+    width: 90%;
+    height: 70px;
+    position: relative;
+    transform: matrix(1, 0.102, 0, 2, 0, 0);
+}
+
+.sec-1-pallete-2 {
+    background-color: #ffffff;
+    top: 190px;
+    left: 610px;
+    width: 66%;
+    height: 70px;
+    position: relative;
+    transform: matrix(1, -0.19, 0, 2, 0, 0);
+}
 
 
 /* --- Content Box with Image Transition Styling CSS --- */
@@ -303,9 +336,23 @@ a {color: #ffffff99;}
 #section-2 {
     width: 100%;
     height: 100vh;
+    padding: 192px 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sec-2-container {
+    border: 1px solid gold;
+    width: 100%;
+    height: fit-content;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.services {
+    border: 1px solid red;
 }
 
 
@@ -409,6 +456,11 @@ footer {
     text-align: center;
 }
 
+#Copyright-bar a {
+    color: #d1002c;
+    text-decoration: none;
+}
+
 
 /* ------ hamburger media query ------*/
 @media (min-width: 48em) {
@@ -452,16 +504,12 @@ footer {
 
 /* --------- Media Query of Max width of 992px --------- */
 @media screen and (max-width: 991px){
-/* Navbar */
+/* --- Navbar --- */
 .header {
     max-width: 750px;
 }
 
-/* Section 1 Content */
-#section-1 {
-    height: fit-content;
-}
-
+/* --- Section 1 Content --- */
 .content {
     min-width: 700px;
     padding: 20px;
@@ -512,6 +560,11 @@ footer {
     margin-left: 10px;
 }
 
+.sec-1-pallete-2 {
+    top: 190px;
+    left: 420px;
+}
+
 /* ------ Footer CSS Styling ------*/
 footer {
     padding: 86px 40px;
@@ -531,7 +584,7 @@ footer {
 /* --------- Media Query of Max width of 576px --------- */
 @media screen and (max-width: 576px){
  
-/* Section-1 Styling */
+/* --- Section-1 Styling --- */
 .content {
     min-width: 330px;
     width: fit-content;
@@ -587,6 +640,10 @@ footer {
     margin-left: 10px;
 }
 
+.sec-1-pallete-2 {
+    top: 190px;
+    left: 225px;
+}
 
 }
 
@@ -647,6 +704,11 @@ footer {
     top: 538px;
     left: 200px;   
     margin-left: 10px;
+}
+
+.sec-1-pallete-2 {
+    top: 200px;
+    left: 200px;
 }
 
 /* ------ Footer CSS Styling ------*/

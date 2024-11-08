@@ -21,7 +21,6 @@
 }
 
 .hero-pallete {
-    border: 1px solid green;
     width: 100%;
     height: 400px;
     overflow: hidden;
@@ -29,22 +28,22 @@
 
 .pallete-1 {
     background-color: #1eb6f2;
-    left: -205px;
-    top: 237px;
-    width: 1216px;
-    height: 165px;
+    top: 274px;
+    left: -30px;
+    width: 90%;
+    height: 70px;
     position: relative;
-    transform: rotate(7deg);
+    transform: matrix(1, 0.102, 0, 2, 0, 0);
 }
 
 .pallete-2 {
     background-color: #eff316;
-    top: 6px;
-    left: 940px;
-    width: 1083px;
-    height: 193px;
+    top: 220px;
+    left: 610px;
+    width: 66%;
+    height: 70px;
     position: relative;
-    transform: rotate(345deg);
+    transform: matrix(1, -0.19, 0, 2, 0, 0);
 }
 
 
@@ -181,7 +180,6 @@ a {color: #ffffff99;}
 }
 
 .sec-1-content {
-    border: 1px solid green;
     width: 936px;
     height: 165px;
     padding:  7px 7px 48px 7px;
@@ -190,11 +188,10 @@ a {color: #ffffff99;}
     flex-direction: column;
     flex-wrap: nowrap;
     position: relative;
-    bottom: -302px;
+    bottom: -210px;
 }
 
 .sec-1-all-hero {
-    /* border: 1px solid rgb(237, 225, 10); */
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -332,6 +329,11 @@ footer {
 #Copyright-bar {
     margin: 50px auto 0 auto;
     text-align: center;
+}
+
+#Copyright-bar a {
+    color: #d1002c;
+    text-decoration: none;
 }
 
 
